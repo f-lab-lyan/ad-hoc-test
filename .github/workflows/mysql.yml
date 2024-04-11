@@ -17,8 +17,8 @@ jobs:
 
     steps:
       - name: Create databases
-        run: mysql -h 127.0.0.1 -P 3306 -u root --password=password 'create database test_db'
+        run: mysql -h 127.0.0.1 -P 3306 -u root --password=password -e 'CREATE DATABASE test_db;'
 
       - name: Check databases
-        run: mysql -h 127.0.0.1 -P 3306 -u root --password=password 'show databases'
+        run: mysql -h 127.0.0.1 -P 3306 -u root --password=password -e 'show databases'
 
